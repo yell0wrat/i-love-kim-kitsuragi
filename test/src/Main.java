@@ -14,7 +14,7 @@ public class Main {
         Rectangle mainScreenBounds = mainScreen.getDefaultConfiguration().getBounds();
 
         //multiple windows on main monitor only
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 99; i++) {
             createImageWindow(i, mainScreenBounds);
         }
     }
@@ -43,11 +43,11 @@ public class Main {
             frame.add(label);
             frame.pack();
 
-            // Calculate position to stay within main screen bounds
+            //calculate position to stay within main screen bounds
             int maxX = screenBounds.width - newWidth;
             int maxY = screenBounds.height - newHeight;
 
-            // Ensure window stays within screen bounds
+            //window stays within screen bounds
             int x = screenBounds.x + random.nextInt(Math.max(1, maxX));
             int y = screenBounds.y + random.nextInt(Math.max(1, maxY));
 
